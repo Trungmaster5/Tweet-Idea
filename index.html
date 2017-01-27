@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app='MagicApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title> Add and remove them with component!! </title>
+  </head>
+  <body>
+    <h1> Add and remove them with component!!</h1>
+
+    <div id="list" ng-controller='AddController as list'>
+      Name: <input type="text" ng-model="list.itemName">
+      <br>
+      Quantity: <input type="text" ng-model="list.itemQuantity">
+      <button ng-click="list.Abrakadabra();">Abrakadabra!!</button>
+      <br>
+      <span> {{ list.lastRemoved }} </span>
+
+      <shopping-list
+        items="list.items"
+        title="{{list.title}}"
+        on-remove="list.removeItem(index)"></shopping-list>
+    </div>
+  </body>
+
+</html>
