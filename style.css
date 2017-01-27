@@ -48,6 +48,7 @@
   max-width:100%;
   overflow-wrap: break-word;
 }
+
 .twt_tag{
   background-color: #FAFAFA;
   border-radius: 10px;
@@ -56,6 +57,7 @@
   margin-bottom:10px;
   box-shadow: 2px 5px 5px #CCCCCC;
   max-width:100%;
+  padding:5px;
   overflow-wrap: break-word;
 }
 footer{
