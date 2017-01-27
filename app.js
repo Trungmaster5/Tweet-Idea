@@ -44,23 +44,24 @@ function AddController (ShoppingListService) {
   var shoppinglist=this;
 
   shoppinglist.items=ShoppingListService.getItems();
-  var origTitle= "Shopping List";
-  shoppinglist.title= origTitle + "("+ shoppinglist.items.length + "items)";
+  var origTitle= "";
+  shoppinglist.title= origTitle + ""+ shoppinglist.items.length + " Thẻ";
 
   shoppinglist.itemName="";
   shoppinglist.itemQuantity="";
 
   shoppinglist.Abrakadabra=function(){
       ShoppingListService.addItem(shoppinglist.itemName,shoppinglist.itemQuantity);
-      shoppinglist.title= origTitle + "("+shoppinglist.items.length+ "items)";
+      shoppinglist.title= origTitle + ""+shoppinglist.items.length+ " Thẻ";
+      shoppinglist.itemName="";
+      shoppinglist.itemQuantity="";
     }
 
   shoppinglist.removeItem=function(itemIndex){
-    this.lastRemoved="Last item removed was" + this.items[itemIndex].name;
+    this.lastRemoved="Đã xóa thẻ " + this.items[itemIndex].name;
     ShoppingListService.removeItem(itemIndex);
-    this.title= origTitle + "("+shoppinglist.items.length+ "items)";
+    this.title= origTitle + ""+shoppinglist.items.length+ " Thẻ";
   };
-
 
 }
 
