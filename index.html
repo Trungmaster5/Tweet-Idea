@@ -12,7 +12,9 @@
   <body ng-controller='AddController as list'>
     <div id="list" class="col-md-4 list_cnt">
       <h1> Tweet ý tưởng của bạn </h1>
-      Tiêu đề: <input type="text" ng-model="list.itemName">
+      <hr>
+      Tiêu đề: <input maxlength="140" type="text" ng-model="list.itemName">
+      <br>
       <br>
       Nội dung (*Giới hạn 140 ký tự):
       <br>
@@ -31,6 +33,7 @@
     </div>
     <div class="col-md-3">
       <h1> Tổng số tweet </h1>
+      <hr>
       <div id="total" class="text-center">
         {{list.title}}
       </div>

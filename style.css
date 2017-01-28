@@ -4,16 +4,16 @@
   height: 100px;
   width:50%;
   position:relative;
-  bottom: 0px;
+  bottom: -5px;
   font-size: 2em;
   border-bottom: 5px solid #DD2C00;
   margin-left:0px;
+  box-shadow: 5px 5px 5px #CCCCCC;
 
 }
 
 .btn:hover {
   background-color: #DD2C00;
-  color: #FFFFFF;
 }
 
 .rm_btn{
