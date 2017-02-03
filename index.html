@@ -20,10 +20,13 @@
       <br>
       <textarea maxlength="140" name="content" type="text" ng-model="list.itemQuantity"></textarea>
       <!-- <h1 ng-if="!Tweet.content.$valid">The value is too long</h1> -->
+      <p>Mẫu: “Với <b>[đối tượng]</b>, những người gặp khó khăn với <b>[vấn đề]</b>,
+        sản phẩm <b>[tên sản phẩm]</b> của chúng tôi cung cấp <b>[giải pháp]</b>.
+        Sản phẩm này có <b>[tính năng]</b>”.
+      </p>
       <br>
       <button class="btn" ng-click="list.Abrakadabra();">Nhập thẻ</button>
       <br>
-      <span> {{ list.lastRemoved }} </span>
     </div>
     <div class="col-md-5 list_cnt">
       <shopping-list
@@ -37,6 +40,17 @@
       <div id="total" class="text-center">
         {{list.title}}
       </div>
+      <hr>
+      <div id="ref">
+        <h1> Tham khảo </h1>
+        <h3> 5 loại ý tưởng </h3>
+          <ul>
+            <li> <b>Simplify</b>: Đơn giản hoá thao tác </li>
+            <li> <b>Me Too</b>: Dùng ý tưởng cũ trên thị trường mới </li>
+            <li> <b>Virtualize</b>: Đưa một công việc lên online </li>
+            <li> <b>Remix</b>: Kết hợp 2 hoặc nhiều ý tưởng </li>
+            <li> <b>Mission Impossible</b>: Thử thách toàn phần </li>
+          </ul>
     </div>
   </body>
   <footer>

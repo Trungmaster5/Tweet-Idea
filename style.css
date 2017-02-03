@@ -60,8 +60,18 @@
   padding:5px;
   overflow-wrap: break-word;
 }
+
+.twt_display{
+  height:600px;
+  overflow-y: scroll;
+}
+
+#ref{
+  margin-bottom:100px;
+}
 footer{
   position:fixed;
+  float:bottom;
   background-color: #CCCCCC;
   height:50px;
   color: #FFFFFF;
