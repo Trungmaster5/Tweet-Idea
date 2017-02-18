@@ -2,30 +2,36 @@
 <html ng-app='MagicApp'>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!----------Libs ---------->
     <script src="jquery-3.1.0.min.js"></script>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <title> Tweet ý tưởng của bạn!! </title>
   </head>
   <body ng-controller='AddController as list'>
     <div id="list" class="col-md-4 list_cnt">
       <h1> Tweet ý tưởng của bạn </h1>
       <hr>
-      Tiêu đề: <input maxlength="140" type="text" ng-model="list.itemName">
-      <br>
-      <br>
-      Nội dung (*Giới hạn 140 ký tự):
-      <br>
-      <textarea maxlength="140" name="content" type="text" ng-model="list.itemQuantity"></textarea>
-      <!-- <h1 ng-if="!Tweet.content.$valid">The value is too long</h1> -->
       <p>Mẫu: “Với <b>[đối tượng]</b>, những người gặp khó khăn với <b>[vấn đề]</b>,
         sản phẩm <b>[tên sản phẩm]</b> của chúng tôi cung cấp <b>[giải pháp]</b>.
         Sản phẩm này có <b>[tính năng]</b>”.
       </p>
       <br>
+      Nội dung (*Giới hạn 140 ký tự):
+      <br>
+      <textarea maxlength="140" name="content" type="text" ng-model="list.itemQuantity"></textarea>
+      <!-- <h1 ng-if="!Tweet.content.$valid">The value is too long</h1> -->
+      <br>
+      Từ khoá: <input maxlength="140" type="text" ng-model="list.itemName">
+      <br>
       <button class="btn" ng-click="list.Abrakadabra();">Nhập thẻ</button>
+      <br>
       <br>
     </div>
     <div class="col-md-5 list_cnt">
@@ -43,7 +49,7 @@
       <hr>
       <div id="ref">
         <h1> Tham khảo </h1>
-        <h3> 5 loại ý tưởng </h3>
+        <h3> 5 kiểu ý tưởng </h3>
           <ul>
             <hr>
             <li style="background-color: #80DEEA"> <b>Simplify</b>: Đơn giản hoá thao tác </li>
@@ -58,7 +64,7 @@
           </ul>
     </div>
   </body>
-  <footer>
+  <footer class="text-center">
     <a> Designed by Trungmaster|2017 </a>
   </footer>
 

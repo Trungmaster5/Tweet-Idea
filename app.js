@@ -74,7 +74,7 @@ function ShoppingListService(){
       name: itemName,
       quantity: itemQuantity
     };
-    items.push(item);
+    items.unshift(item);
   };
 
   service.getItems= function(){
