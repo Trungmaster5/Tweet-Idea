@@ -1,11 +1,12 @@
-.btn {
+.btn-ctm {
   background-color:#00aced;
   color: #FFFFFF;
   height: 100px;
-  width:50%;
+  width:40%;
   position:relative;
   bottom: -20px;
   font-size: 1.2em;
+  margin:10px;
   border-bottom: 5px solid #DD2C00;
   margin-left:0px;
   box-shadow: 5px 5px 5px #CCCCCC;

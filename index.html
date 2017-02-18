@@ -9,11 +9,16 @@
     <!----------Libs ---------->
     <script src="jquery-3.1.0.min.js"></script>
     <script src="angular.min.js"></script>
+    <scritp src="pdfmake.min.js"></script>
+    <scritp src="vfs_fonts.js"></script>
     <script src="app.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title> Tweet ý tưởng của bạn!! </title>
+
   </head>
+
   <body ng-controller='AddController as list'>
     <div id="list" class="col-md-4 list_cnt">
       <h1> Tweet ý tưởng của bạn </h1>
@@ -23,28 +28,30 @@
         Sản phẩm này có <b>[tính năng]</b>”.
       </p>
       <br>
-      Nội dung (*Giới hạn 140 ký tự):
-      <br>
+      <h4> Nội dung (*Giới hạn 140 ký tự): </h4>
       <textarea maxlength="140" name="content" type="text" ng-model="list.itemQuantity"></textarea>
       <!-- <h1 ng-if="!Tweet.content.$valid">The value is too long</h1> -->
       <br>
-      Từ khoá: <input maxlength="140" type="text" ng-model="list.itemName">
+      Từ khoá (optional): <input maxlength="140" type="text" ng-model="list.itemName">
       <br>
-      <button class="btn" ng-click="list.Abrakadabra();">Nhập thẻ</button>
+      <button class="btn btn-ctm" ng-click="list.Abrakadabra();">Nhập thẻ</button>
       <br>
       <br>
     </div>
-    <div class="col-md-5 list_cnt">
+    <div id="mainContent" class="col-md-5 list_cnt">
       <shopping-list
         items="list.items"
         title="{{list.title}}"
         on-remove="list.removeItem(index)"></shopping-list>
     </div>
     <div class="col-md-3">
-      <h1> Tổng số tweet </h1>
+      <h1> Tổng số tweet</h1>
       <hr>
-      <div id="total" class="text-center">
-        {{list.title}}
+      <div class="text-right">
+        <div id="total" class="text-center">
+          {{list.title}}
+        </div>
+        <button class="btn btn-default" ng-click="list.print();">In thẻ <span class="glyphicon glyphicon-print"></span></button>
       </div>
       <hr>
       <div id="ref">

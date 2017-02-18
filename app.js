@@ -37,8 +37,8 @@ function ShoppingListComponentController(){
 };
 }
 
-AddController.$inject=['ShoppingListService'];
-function AddController (ShoppingListService) {
+AddController.$inject=['ShoppingListService','$scope'];
+function AddController (ShoppingListService, $scope) {
   //$scope.itemName="";
   //$scope.itemQuantity="";
   var shoppinglist=this;
@@ -56,6 +56,14 @@ function AddController (ShoppingListService) {
       shoppinglist.itemName="";
       shoppinglist.itemQuantity="";
     }
+
+  shoppinglist.print=function(){
+        var printContents = document.getElementById('mainContent').innerHTML;
+        var popupWin = window.open('', '_blank', 'width=800,height=800');
+        popupWin.document.open();
+        popupWin.document.write('<html><body onload="window.print()">' + printContents + '</body></html>');
+        popupWin.document.close();
+      };
 
   shoppinglist.removeItem=function(itemIndex){
     this.lastRemoved="Đã xóa thẻ " + this.items[itemIndex].name;
